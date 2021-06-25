@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-25T06:03:51.953Z</updated>
+    <updated>2021-06-25T08:26:09.331Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
+    <entry>
+        <title type="html"><![CDATA[再加点图片试一试]]></title>
+        <id>https://drclairvoyant.github.io/post/zai-jia-dian-tu-pian-shi-yi-shi/</id>
+        <link href="https://drclairvoyant.github.io/post/zai-jia-dian-tu-pian-shi-yi-shi/">
+        </link>
+        <updated>2021-06-25T08:16:53.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/06/25/1kQMzuD63BoJjNt.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[试一下能不能加图片]]></title>
         <id>https://drclairvoyant.github.io/post/shi-yi-xia-neng-bu-neng-jia-tu-pian/</id>
