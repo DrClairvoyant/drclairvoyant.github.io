@@ -1,38 +1,157 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000d3; -webkit-text-stroke: 0px #0000d3}
-    span.s3 {text-decoration: underline ; font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %&gt;</span></p>
-<p class="p1"><span class="s1">&lt;%- include('./includes/header') %&gt;</span></p>
-<p class="p1"><span class="s1">&lt;% if (themeConfig.showFeatureImage &amp;&amp; post.feature) { %&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">&lt;% } %&gt;</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;%= post.title %&gt;</b></span></h2>
-<p class="p1"><span class="s1">&lt;%= post.dateFormat %&gt; &lt;% if (post.tags.length &gt; 0) { %&gt; &lt;% post.tags.forEach(function(tag, index) { %&gt; <a href="file:///Users/micahs.z./OneDrive/%E5%BA%94%E7%94%A8/Gridea/themes/fly/templates/%3C%25=%20tag.link%20%25%3E"><span class="s2">&lt;%= tag.name %&gt; &lt;% if (index !== post.tags.length - 1) { %&gt; ï¼Œ &lt;% } %&gt; </span></a>&lt;% }); %&gt; &lt;% } %&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1">&lt;%- post.content %&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1">&lt;% if (post.nextPost &amp;&amp; !post.hideInList) { %&gt;</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #0000e9; -webkit-text-stroke: #0000d3"><span class="s3"><a href="file:///Users/micahs.z./OneDrive/%E5%BA%94%E7%94%A8/Gridea/themes/fly/templates/%3C%25=%20post.nextPost.link%20%25%3E"><b>ä¸‹ä¸€ç¯‡ï¼š&lt;%= post.nextPost.title %&gt;<span class="Apple-converted-space"> </span></b></a></span></h3>
-<p class="p1"><span class="s1">&lt;% } %&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1">&lt;% if (typeof commentSetting !== 'undefined' &amp;&amp; commentSetting.showComment) { %&gt; &lt;% if (commentSetting.commentPlatform === 'gitalk') { %&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">&lt;% } %&gt; &lt;% if (commentSetting.commentPlatform === 'disqus') { %&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">&lt;% } %&gt; &lt;% } %&gt; &lt;%- include('./includes/footer') %&gt;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1">&lt;%- include('./includes/scripts') %&gt;<span class="Apple-converted-space"> </span></span></p>
-</body>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>试一下能不能加图片 | Micah的日常BB Channel</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://drclairvoyant.github.io/favicon.ico?v=1624616876095">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://drclairvoyant.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+      <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://drclairvoyant.github.io">
+        <img class="avatar" src="https://drclairvoyant.github.io/images/avatar.png?v=1624616876095" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://drclairvoyant.github.io">
+        <h1 class="site-title">Micah的日常BB Channel</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">试一下能不能加图片</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-06-25</span>
+            
+          </div>
+          <div class="post-content">
+            <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/640-1.webp" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/2021-06-13_19.07.38.png" alt="" loading="lazy"></figure>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://drclairvoyant.github.io/post/fan-yi-yi-xia/">
+              <h3 class="post-title">
+                下一篇：翻译一下
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+
+
+    <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'nIvkHB6QL5VI85IDHtyfP22z-gzGzoHsz',
+            appKey: 'hJlS4FMBttEBRgYtej4noOLt'
+        })
+    </script>
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://drclairvoyant.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
 </html>
