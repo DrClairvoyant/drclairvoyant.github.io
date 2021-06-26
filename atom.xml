@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-26T03:46:21.777Z</updated>
+    <updated>2021-06-26T03:56:35.463Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
+    <entry>
+        <title type="html"><![CDATA[访问须知]]></title>
+        <id>https://drclairvoyant.github.io/post/visit-guide/</id>
+        <link href="https://drclairvoyant.github.io/post/visit-guide/">
+        </link>
+        <updated>2021-06-26T03:48:13.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>因为本站是基于GitHub Pages制作，所以在未来有可能会出现国内直连访问不了的情况，此方法可以通过科学上网来解决。</strong></p>
+<p>图片的话我目前用的是GitHub图床和sm.ms图床，两者各有利弊，用GitHub图床可能会出现国内直连显示不了图片的情况（用流量好像可以……），而sm.ms图床上传速度太慢，图片显示稳定性似乎不是太好（流汗）</p>
+<p>目前发现在<strong>安卓</strong>端使用<strong>中国电信的流量</strong>以<strong>Chrome</strong>用作浏览器来访问会出现「拒绝连接请求的问题」！用家用WiFi或者另一个浏览器情况会改善很多！！！</p>
+<p>此条目会持续更新，欢迎各位在评论区反应访问情况👏👏👏～</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[再加点图片试一试]]></title>
         <id>https://drclairvoyant.github.io/post/zai-jia-dian-tu-pian-shi-yi-shi/</id>
@@ -31,8 +43,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[翻译一下]]></title>
-        <id>https://drclairvoyant.github.io/post/fan-yi-yi-xia/</id>
-        <link href="https://drclairvoyant.github.io/post/fan-yi-yi-xia/">
+        <id>https://drclairvoyant.github.io/post/translation/</id>
+        <link href="https://drclairvoyant.github.io/post/translation/">
         </link>
         <updated>2021-06-24T14:22:33.000Z</updated>
         <content type="html"><![CDATA[<p>什么tm叫tm的博客？？？！！！</p>
