@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-26T05:25:01.667Z</updated>
+    <updated>2021-06-26T05:48:14.457Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -31,6 +31,10 @@
 <p>图片的话我目前用的是GitHub图床和sm.ms图床，两者各有利弊，用GitHub图床可能会出现国内直连显示不了图片的情况（用流量好像可以……），而sm.ms图床上传速度太慢，图片显示稳定性似乎不是太好（流汗）未来将会考虑以本地插入图片的方式解决。</p>
 <p>目前发现在<strong>安卓</strong>端使用<strong>中国电信的流量</strong>以<strong>Chrome</strong>用作浏览器来访问会出现「拒绝连接请求的问题」！用家用WiFi或者另一个浏览器情况会改善很多！！！</p>
 <h2 id="评论注意事项">评论注意事项</h2>
+<p>本站的评论系统是基于Valine评论系统制作，评论部分的昵称、邮箱、网址这三个栏<strong>都可以不填写</strong>， 但是强烈建议给自己起个名，要不然一堆匿名用户在底下留言也有些恐怖……</p>
+<ul>
+<li>这里的邮箱是你注册一个Gravata账号（好像是这么叫的）后，在评论框里填写自己的邮箱就可以用自己更换的头像，而不是本站默认的灰色小人；但是站长自己没有试过，所以也不知道效果怎么样</li>
+</ul>
 <p>本站基于言论自由的原则为各位提供开放的评论，但出现个别情况（如严重人身攻击等恶意评论）将会进行删评论处理。</p>
 <p>站长本人衷心希望各位能以平和有礼的姿态进行交流评论🙏🙏🙏</p>
 <p>此条目会持续更新，欢迎各位在评论区反应访问情况👏👏👏～</p>
