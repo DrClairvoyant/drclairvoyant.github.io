@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-26T11:54:53.010Z</updated>
+    <updated>2021-06-26T12:02:35.980Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>言者无罪，闻者足戒。</subtitle>
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
@@ -55,7 +55,7 @@
 <h2 id="评论注意事项">评论注意事项</h2>
 <p>本站的评论系统是基于Valine评论系统制作，评论部分的昵称、邮箱、网址这三个栏<strong>都可以不填写</strong>， 但是强烈建议给自己起个名，要不然一堆匿名用户在底下留言也有些恐怖……</p>
 <ul>
-<li>这里的邮箱是你注册一个Gravata账号（好像是这么叫的）后，在评论框里填写自己的邮箱就可以用自己更换的头像，而不是本站默认的灰色小人；但是站长自己没有试过，所以也不知道效果怎么样</li>
+<li>这里的邮箱是你注册一个<s>Gravata账号（好像是这么叫的）</s> <strong>（已经查证是Gravatar账号）</strong> 后，在评论框里填写自己的邮箱就可以用自己更换的头像，而不是本站默认的灰色小人；但是站长自己没有试过，所以也不知道效果怎么样</li>
 </ul>
 <p>本站基于言论自由的原则为各位提供开放的评论，但出现个别情况（如严重人身攻击等恶意评论）将会进行删评论处理。</p>
 <p>站长本人衷心希望各位能以平和有礼的姿态进行交流评论🙏🙏🙏</p>
