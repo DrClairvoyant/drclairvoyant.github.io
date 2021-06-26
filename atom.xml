@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-26T06:57:39.584Z</updated>
+    <updated>2021-06-26T11:51:05.036Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
+    <entry>
+        <title type="html"><![CDATA[换个网再试试sm.ms图床]]></title>
+        <id>https://drclairvoyant.github.io/post/huan-ge-wang-zai-shi-shi-smms-tu-chuang/</id>
+        <link href="https://drclairvoyant.github.io/post/huan-ge-wang-zai-shi-shi-smms-tu-chuang/">
+        </link>
+        <updated>2021-06-26T11:50:21.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/06/26/zO21Bv8ht5kSLcR.png" alt="" loading="lazy"></figure>
+<p>这图并不是真的啊！！！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[拉丁特殊字符测试]]></title>
         <id>https://drclairvoyant.github.io/post/la-ding-te-shu-zi-fu-ce-shi/</id>
