@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-27T08:07:32.346Z</updated>
+    <updated>2021-06-27T08:35:02.157Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,6 +10,44 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
+    <entry>
+        <title type="html"><![CDATA[测试区]]></title>
+        <id>https://drclairvoyant.github.io/post/testing/</id>
+        <link href="https://drclairvoyant.github.io/post/testing/">
+        </link>
+        <updated>2021-06-27T08:20:48.000Z</updated>
+        <content type="html"><![CDATA[<p>此为本博客的测试区</p>
+<h2 id="github图床上传">GitHub图床上传</h2>
+<p>使用GitHub图床</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/640-1.webp" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/2021-06-13_19.07.38.png" alt="" loading="lazy"></figure>
+<h2 id="smms图床上传">sm.ms图床上传</h2>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/06/25/1kQMzuD63BoJjNt.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/06/26/zO21Bv8ht5kSLcR.png" alt="" loading="lazy"></figure>
+<p>这图并不是真的啊！！！</p>
+<h2 id="特殊字符">特殊字符</h2>
+<p>The quick brown fox jumps over a lazy dog.</p>
+<p>Nomen tibi Marcus est.</p>
+<p>Un éléphant se lève au matin, c'est comme ça.</p>
+<p>Li amas ĉokolado.</p>
+<p>L'amour n'est pas à côté de mon cœur.</p>
+<p>Ich heiße Mark</p>
+<p>甘いすし</p>
+<p>こんにちは！</p>
+<p>おはよう！</p>
+<p>さようなら！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[这次试一下本地添加图片]]></title>
+        <id>https://drclairvoyant.github.io/post/pict-without-picbed/</id>
+        <link href="https://drclairvoyant.github.io/post/pict-without-picbed/">
+        </link>
+        <updated>2021-06-26T05:23:45.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://drclairvoyant.github.io/post-images/1624685045474.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://drclairvoyant.github.io/post-images/1624685058222.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[翻译一下]]></title>
         <id>https://drclairvoyant.github.io/post/translation/</id>
