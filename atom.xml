@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-27T08:35:02.157Z</updated>
+    <updated>2021-06-27T08:47:10.377Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
+    <entry>
+        <title type="html"><![CDATA[这次直连还能发吗？]]></title>
+        <id>https://drclairvoyant.github.io/post/zhe-ci-zhi-lian-huan-neng-fa-ma/</id>
+        <link href="https://drclairvoyant.github.io/post/zhe-ci-zhi-lian-huan-neng-fa-ma/">
+        </link>
+        <updated>2021-06-27T08:45:43.000Z</updated>
+        <content type="html"><![CDATA[<p>搞了好久，感觉像是请来了个爷，搞来搞去头都大了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[测试区]]></title>
         <id>https://drclairvoyant.github.io/post/testing/</id>
