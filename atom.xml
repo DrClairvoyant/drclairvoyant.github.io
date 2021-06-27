@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-06-27T07:27:59.341Z</updated>
+    <updated>2021-06-27T08:03:04.923Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -10,60 +10,6 @@
     <logo>https://drclairvoyant.github.io/images/avatar.png</logo>
     <icon>https://drclairvoyant.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Micah的日常BB Channel</rights>
-    <entry>
-        <title type="html"><![CDATA[换个网再试试sm.ms图床]]></title>
-        <id>https://drclairvoyant.github.io/post/huan-ge-wang-zai-shi-shi-smms-tu-chuang/</id>
-        <link href="https://drclairvoyant.github.io/post/huan-ge-wang-zai-shi-shi-smms-tu-chuang/">
-        </link>
-        <updated>2021-06-26T11:50:21.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/06/26/zO21Bv8ht5kSLcR.png" alt="" loading="lazy"></figure>
-<p>这图并不是真的啊！！！</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/06/26/zO21Bv8ht5kSLcR.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[拉丁特殊字符测试]]></title>
-        <id>https://drclairvoyant.github.io/post/la-ding-te-shu-zi-fu-ce-shi/</id>
-        <link href="https://drclairvoyant.github.io/post/la-ding-te-shu-zi-fu-ce-shi/">
-        </link>
-        <updated>2021-06-26T06:46:22.000Z</updated>
-        <content type="html"><![CDATA[<p>The quick brown fox jumps over a lazy dog.</p>
-<p>Un éléphant se lève au matin, c'est comme ça.</p>
-<p>Li amas ĉokolado.</p>
-<p>L'amour n'est pas à côté de mon cœur.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[这次试一下本地添加图片]]></title>
-        <id>https://drclairvoyant.github.io/post/zhe-ci-shi-yi-xia-ben-di-tian-jia-tu-pian/</id>
-        <link href="https://drclairvoyant.github.io/post/zhe-ci-shi-yi-xia-ben-di-tian-jia-tu-pian/">
-        </link>
-        <updated>2021-06-26T05:23:45.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://drclairvoyant.github.io/post-images/1624685045474.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://drclairvoyant.github.io/post-images/1624685058222.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[再加点图片试一试]]></title>
-        <id>https://drclairvoyant.github.io/post/zai-jia-dian-tu-pian-shi-yi-shi/</id>
-        <link href="https://drclairvoyant.github.io/post/zai-jia-dian-tu-pian-shi-yi-shi/">
-        </link>
-        <updated>2021-06-25T08:16:53.000Z</updated>
-        <content type="html"><![CDATA[<p>使用sm.ms图床</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/06/25/1kQMzuD63BoJjNt.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[试一下能不能加图片]]></title>
-        <id>https://drclairvoyant.github.io/post/shi-yi-xia-neng-bu-neng-jia-tu-pian/</id>
-        <link href="https://drclairvoyant.github.io/post/shi-yi-xia-neng-bu-neng-jia-tu-pian/">
-        </link>
-        <updated>2021-06-25T06:02:40.000Z</updated>
-        <content type="html"><![CDATA[<p>使用GitHub图床</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/640-1.webp" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/DrClairvoyant/PicBed_PicGo/master/2021-06-13_19.07.38.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[翻译一下]]></title>
         <id>https://drclairvoyant.github.io/post/translation/</id>
