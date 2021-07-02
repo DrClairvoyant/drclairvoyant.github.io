@@ -8,7 +8,7 @@
 <meta name="keywords" content="Micah">
 <meta name="description" content="言者无罪，闻者足戒。">
 <meta name="theme-color" content="#000">
-<title>访问&amp;评论须知 | Micah的日常BB Channel</title>
+<title>【一周BB】2021/06/28–––2021/07/04 | Micah的日常BB Channel</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1625197071128">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -29,8 +29,8 @@
 
 
 
-  <meta name="description" content="访问&评论须知" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="【一周BB】2021/06/28–––2021/07/04" />
+  <meta name="keywords" content="一周BB" />
 </head>
 
 <body>
@@ -200,8 +200,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,196 +251,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE">网站访问</a></li>
-<li><a href="#%E8%AF%84%E8%AE%BA%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">评论注意事项</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -529,8 +338,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://drclairvoyant.github.io/post/visit-guide/">
-      访问&amp;评论须知
+    <a class="post-title-link" href="https://drclairvoyant.github.io/post/weekly-bb-20210628-20210704/">
+      【一周BB】2021/06/28–––2021/07/04
     </a>
   </h1>
   <div class="post-meta">
@@ -538,9 +347,22 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2021-06-26</span>
+      <span>2021-07-02</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://drclairvoyant.github.io/tag/weekly-bb/">
+        <span>一周BB</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
@@ -549,12 +371,12 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>503<span class="pc-show">字数</span></span>
+      <span>390<span class="pc-show">字数</span></span>
     </span>
     
     
     
-    <span id="/post/visit-guide/" data-flag-title="访问&amp;评论须知" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/weekly-bb-20210628-20210704/" data-flag-title="【一周BB】2021/06/28–––2021/07/04" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span>浏览量：<span class="leancloud-visitors-count"></span></span>
@@ -563,18 +385,23 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h2 id="网站访问">网站访问</h2>
-<p><strong>因为本站是基于GitHub Pages制作，所以在未来有可能会出现国内直连访问不了的情况，此方法可以通过科学上网来解决。</strong></p>
-<p>图片的话我目前用的是GitHub图床和sm.ms图床，两者各有利弊，用GitHub图床可能会出现国内直连显示不了图片的情况（用流量好像可以……），而sm.ms图床上传速度太慢，图片显示稳定性似乎不是太好（流汗）未来将会考虑以本地插入图片的方式解决。</p>
-<p>目前发现在<strong>安卓</strong>端使用<strong>中国电信的流量</strong>以<strong>Chrome</strong>用作浏览器来访问会出现「拒绝连接请求的问题」！用家用WiFi或者另一个浏览器情况会改善很多！！！</p>
-<h2 id="评论注意事项">评论注意事项</h2>
-<p>本站的评论系统是基于Valine评论系统制作，评论部分的昵称、邮箱、网址这三个栏<strong>都可以不填写</strong>， 但是强烈建议给自己起个名，要不然一堆匿名用户在底下留言也有些恐怖……</p>
-<ul>
-<li>这里的邮箱是你注册一个<s>Gravata账号（好像是这么叫的）</s> <strong>（已经查证是Gravatar账号）</strong> 后，在评论框里填写自己的邮箱就可以用自己更换的头像，而不是本站默认的灰色小人；<s>但是站长自己没有试过，所以也不知道效果怎么样</s> <strong>（站长试了一下，要换自己头像的话Gravatar还需要你注册一个WordPress账号，英文好的又不嫌麻烦的可以去试一下）</strong></li>
-</ul>
-<p>本站基于言论自由的原则为各位提供开放的评论，但出现个别情况（如严重人身攻击等恶意评论）将会进行删评论处理。</p>
-<p>站长本人衷心希望各位能以平和有礼的姿态进行交流评论🙏🙏🙏</p>
-<p>此条目会持续更新，欢迎各位在评论区反应访问情况👏👏👏～</p>
+              <p><strong>2021年06月28日</strong><br>
+坐在星巴克，隔壁有一对母子，妈妈给儿子在教什么心室、动脉、哪里在哪里等等，还说等会要画图考他；这孩子看着还差不多初中，要学医也太早了点吧？</p>
+<p>几分钟后更新一下，我仔细的看了一下他们手上的纸，估计是学人体生物学到心脏和血管这一块了。想想以前也学过但是现在全还给老师了，自叹自愧不如。但我真怕那个儿子少秃头，还挺帅的一小伙子，可别这么早就把头发奉献了。</p>
+<p><strong>2021年06月28日</strong></p>
+<p>博客用的是GitHub Pages，换了三个网挂了梯子同步都不行，但是换了第二个网没有挂梯子就行了</p>
+<p>？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？</p>
+<p>GFW啊GFW，你总是能给我搞出点新花样（</p>
+<hr>
+<p><strong>2021年06月29日</strong><br>
+看到有一个美国和澳大利亚的研究，说20000年以前就有过冠状病毒大流行了，突然之间就有了一个恐怖的脑洞：会不会新冠病毒就是自然的产物，用以定点清除及灭绝人类，以维持自身的生态平衡；后面在我们灭绝后（只是一个假设哈，脑洞嘛想啥都行），新的人类物种诞生，进化了好久后又被新一轮的冠状病毒灭绝？</p>
+<hr>
+<p><strong>2021年07月01日</strong><br>
+一张图总结一下某伟光正大党的百岁诞辰：<br>
+<img src="https://i.loli.net/2021/07/02/MC5wilufZBvp8JS.jpg" alt="" loading="lazy"></p>
+<hr>
+<p><strong>2021年07月02日</strong><br>
+早上8:30起来，放了一个有低频下潜的屁。</p>
 
             </div>
             <div class="post-footer">
@@ -585,7 +412,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://drclairvoyant.github.io/post/visit-guide/" title="访问&amp;评论须知">https://drclairvoyant.github.io/post/visit-guide/</a>
+      <a href="https://drclairvoyant.github.io/post/weekly-bb-20210628-20210704/" title="【一周BB】2021/06/28–––2021/07/04">https://drclairvoyant.github.io/post/weekly-bb-20210628-20210704/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -594,12 +421,18 @@
   </ul>
   <div class="tags">
     
+      <a href="https://drclairvoyant.github.io/tag/weekly-bb/"># 一周BB</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="我决定去学日语了" href="https://drclairvoyant.github.io/post/wo-jue-ding-qu-xue-ri-yu-liao/">我决定去学日语了</a>
+        <a class="nav-mobile-next" title="我决定去学日语了" href="https://drclairvoyant.github.io/post/wo-jue-ding-qu-xue-ri-yu-liao/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
