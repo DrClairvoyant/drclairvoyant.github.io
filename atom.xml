@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://drclairvoyant.github.io</id>
     <title>Micah的日常BB Channel</title>
-    <updated>2021-07-11T15:31:29.149Z</updated>
+    <updated>2021-07-23T05:31:32.431Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://drclairvoyant.github.io"/>
     <link rel="self" href="https://drclairvoyant.github.io/atom.xml"/>
@@ -193,6 +193,9 @@ Minecraft国际版（Java）继支持了世界上绝大多数语言之后又来�
 <figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/06/25/1kQMzuD63BoJjNt.jpg" alt="" loading="lazy"></figure>
 <figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/06/26/zO21Bv8ht5kSLcR.png" alt="" loading="lazy"></figure>
 <p>这图并不是真的啊！！！</p>
+<h2 id="gitee图床上传">Gitee图床上传</h2>
+<figure data-type="image" tabindex="5"><img src="https://gitee.com/drclairvoyant/picgo-picbed/raw/master/Dr_Clairvoyant%202021-07-07%2015.06.38.jpeg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://gitee.com/drclairvoyant/picgo-picbed/raw/master/%E6%88%AA%E5%B1%8F2021-07-19%20%E4%B8%8B%E5%8D%889.54.48.png" alt="" loading="lazy"></figure>
 <h2 id="特殊字符">特殊字符</h2>
 <p>The quick brown fox jumps over a lazy dog.</p>
 <p>Nomen tibi Marcus est.</p>
