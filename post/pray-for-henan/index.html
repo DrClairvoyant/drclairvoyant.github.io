@@ -8,7 +8,7 @@
 <meta name="keywords" content="Micah">
 <meta name="description" content="言者无罪，闻者足戒。">
 <meta name="theme-color" content="#000">
-<title>我决定去学日语了 | Micah的日常BB Channel</title>
+<title>为河南祈福&amp;更新通知 | Micah的日常BB Channel</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1627147306935">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -29,7 +29,7 @@
 
 
 
-  <meta name="description" content="我决定去学日语了" />
+  <meta name="description" content="为河南祈福&更新通知" />
   <meta name="keywords" content="" />
 </head>
 
@@ -200,8 +200,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,198 +251,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#%E6%88%91%E5%86%B3%E5%AE%9A%E5%8E%BB%E5%AD%A6%E6%97%A5%E8%AF%AD%E4%BA%86">我决定去学日语了</a>
-<ul>
-<li><a href="#%E5%AD%A6%E6%97%A5%E8%AF%AD%E4%B9%8B%E5%89%8D">学日语之前</a></li>
-<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%BB%E5%AD%A6%E4%BA%86%E6%97%A5%E8%AF%AD">为什么去学了日语？</a></li>
-<li><a href="#%E7%8E%B0%E5%9C%A8%E6%84%9F%E6%83%B3%E5%A6%82%E4%BD%95">现在感想如何？</a></li>
-<li><a href="#%E7%8E%B0%E5%9C%A8%E6%B0%B4%E5%B9%B3%E5%A6%82%E4%BD%95">现在水平如何？</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -531,32 +338,38 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://drclairvoyant.github.io/post/wo-jue-ding-qu-xue-ri-yu-liao/">
-      我决定去学日语了
+    <a class="post-title-link" href="https://drclairvoyant.github.io/post/pray-for-henan/">
+      为河南祈福&amp;更新通知
     </a>
   </h1>
   <div class="post-meta">
     
+    <span class="meta-item">
+      <i class="fa fa-thumb-tack"></i>
+      <span>置顶</span>
+      <span class="post-meta-divider">|</span>
+    </span>
+    
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2021-06-28</span>
+      <span>2021-07-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1666<span class="pc-show">字数</span></span>
+      <span>580<span class="pc-show">字数</span></span>
     </span>
     
     
     
-    <span id="/post/wo-jue-ding-qu-xue-ri-yu-liao/" data-flag-title="我决定去学日语了" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/pray-for-henan/" data-flag-title="为河南祈福&amp;更新通知" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span>浏览量：<span class="leancloud-visitors-count"></span></span>
@@ -565,55 +378,26 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="我决定去学日语了">我决定去学日语了</h1>
-<p>首先，先庆贺一下我的博客正式开通啦！</p>
-<p>开站的第一篇正经文章，我也没有太多灵感，于是就想拿这件事来说道说道。</p>
-<p>日语这个东西，我一直觉得这玩意儿在中国的普及率可能比英语还要高。</p>
-<p>就比如在学校里，你可能不会说英语，但是大多数动漫的名场面或者名台词你都能用日语招呼的上来。</p>
-<p>但与此同时，这也成为了我对一开始学习日语有些抗拒的原因。</p>
-<p>因为一听到日语，我本人就老是会将它关联到二次元，而本人又对二次元又不是特别感冒（觉得有时候真的太中二了），所以即使我喜欢学习外来语，也对学习日语也不是那么有兴趣了。</p>
-<p><strong>但是这里别误会，每个人想成为什么样的人都是依照着他们的自由意志，我个人并不能对其干涉；而且我遇到的有些人同样也是二次元爱好者，但是也是一群可爱的人😊</strong></p>
-<h2 id="学日语之前">学日语之前</h2>
-<p>在学日语之前，我其实对韩语比较感兴趣。</p>
-<p>韩语吸引我的原因并不是因为其背后的文化，<strong>而是因为其简单的字形，以及（我个人觉得）更加官方的一种风格。</strong></p>
-<p>拿字形来说，日语有分平假名和片假名两个类别，两个类别的书写也不尽相同；之前有一位可爱的同学试过教我日语，但是因为我怎么也写不好平假名，所以他就血压极速升高然后就放弃了（在这里再跟这位同学说声对不起🙏🙏🙏）</p>
-<p>而韩语呢，字不是横竖就是方块圆圈，没有日语的那么多拐弯；而且韩语的字符也是靠辅音和元音组合来发生，在刚开始学的时候其实会比日语直接背哪个字发哪个音简单一些（不过到后面读的时候日语会简单一些，因为一个字只发一个音，韩语的话你还要先过一遍脑子想想这个是怎么组合怎么读的）。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/06/28/rCi2bE49fpHvPVU.jpg" alt="" loading="lazy"></figure>
-<p>我妈自己也不止一次的对我表示了我学韩语的不满，她自己更倾向于我去日本留学而不是去韩国，而且他觉得我的性格和日本人很像：谦和有礼并且守规矩；与此同时我的那个同学（教我日语未果然后血压升高那个）也在我学韩语这方面对我有些鄙视了👎</p>
-<p>但是这些因素我自己也没有太过理会，因为情况也还没严重到我不学日语就要很讨厌我的一种程度😅</p>
-<h2 id="为什么去学了日语">为什么去学了日语？</h2>
-<p>直到差不多期末的时候，事态就开始变化了……</p>
-<p>我认识了一个美术界的大牛，自己跟着他做个小徒弟，期末之前的时候他刚好来深圳，我们就一起聚了个餐（我妈当时也在场）。聚餐的时候，他问起我的近况，我妈就跟他说我学什么不好非要学韩语，然后他就跟我说：</p>
-<blockquote>
-<p><strong>你要这么说的话，那我也要跟着鄙视你了。</strong></p>
-</blockquote>
-<p>其实除开这个还有一些其他的因素，例如韩国人的平均素质和当时韩国因为和我们这双边文化关系不合而产生的种种矛盾，但是这里就不会对这些东西详细讲了，毕竟这个问题也不是我这一个人能讲得清的，而且当时我的脑子里就一件事情：</p>
-<p><strong>这可是我师傅啊！要是只有我妈鄙视我那还算家事倒还说得过去，但是要我师傅也开始了那就问题大了！！！</strong></p>
-<p>作为徒弟的我丝毫不敢怠慢，于是在期末结束之后我马上开了一个多邻国的日语课程，并一直坚持打卡至今。</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/06/28/QVXNThWSwiogJ15.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/06/28/m1q6BC9u7NJT5QW.png" alt="" loading="lazy"></figure>
-<p>我也同时的把这件事告诉了我的那个教我日语的同学，一把结果告诉他后他马上开始手舞足蹈的幸灾乐祸。</p>
-<h2 id="现在感想如何">现在感想如何？</h2>
-<p>现在，<strong>真香。</strong></p>
-<p>在之前的段落就提过，韩语的字符虽然能学得快，但是一开始读的时候很可能会断断续续、不顺畅，而日语一字一音的设计虽然前期学习成本有些高（就只能背），但是后面读的时候就能很顺畅的读出来。</p>
-<p>至少现在的一些名台词和日语歌词也能慢慢的读出来了，比如说ここすき（喜欢这个部分）、あいしてる（朋友情侣之间说的喜欢你）、ここだよ（ko ko da yo！感觉可以直接理解为闪亮登场的意思，就是有点点中二）、甚至是『いいよ、こいよ！』<strong>（这句いいよ、こいよ！是个梗，最好别去查什么意思……）</strong></p>
-<p>不过在学习日语的同时，我倒也没有放下与韩语的一些接触，而这些接触方法也主要是<strong>看韩剧</strong>。</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/06/28/2BDfLX7dINa5S41.jpg" alt="" loading="lazy"></figure>
-<blockquote>
-<p>我看的韩剧《窥探》，这里对学校某位法语老师开的韩语社表示谢意</p>
-</blockquote>
-<p>倒是我妈恨不得让我和韩语藕断且丝不连，每次看完韩剧的时候她就向我表示她听里面的对白都快要疯了💦……</p>
-<p>哦对了，除开韩剧，我现在也入了JoJo的坑了👍</p>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/06/28/EZrzlIkyVvNS4H5.jpg" alt="" loading="lazy"></figure>
-<blockquote>
-<p>谢邀，人已经去过埃及和杜王町，已经在意大利了 <strong>（这边由衷的感谢某ly同学）</strong></p>
-</blockquote>
-<h2 id="现在水平如何">现在水平如何？</h2>
-<p>我目前平假名的50音就快学完了，还没有学到如何造句，但是多邻国的课程已经有带有形容词的名词的题目了。</p>
-<p>以后还会努力学习，如果能超过以前尝试过教我日语的同学就感觉更好了😋</p>
-<p>之前我还去过一次日本，当时仅靠英语和手语和我妈和外婆在各个城市活了下来，现在想想能做到这件事也是挺不可思议的（英语在日本的普及率感觉并不是很高）……</p>
-<p>如果以后有机会，我挺想在学好日语之后再去一次日本，切切实实的感受当地浓厚的风情文化。</p>
-<p>以后能不能去日本目前还是一个未知数，<strong>但希望这次学日语的开始也能成为这段缘的开始。</strong></p>
+              <p>这几日发生在中原大地上的人间惨剧，相信各位都有目共睹。</p>
+<p>如果各位读者点进了这篇文章，站长恳请你抽出一分钟的时间，为现在在河南的每一位正在受苦的人祈福，也希望为每一位不幸逝世的人默哀。</p>
+<p>站长在洪水爆发的前夕到访过河南，并被那里雄厚的历史以及热情友好的本地人打动。</p>
+<p>现在，我们在这片土地上见到了失去至亲的悲痛，<strong>也有在一个个人之中展现的舍小我为大义的勇气。</strong></p>
+<p><em><strong>这些人的精神堪比钻石，他们的光辉将比肩繁星。</strong></em></p>
+<hr>
+<p>站长本来计划从河南回来时更新博文，讲一下自己的游记。</p>
+<p>但我刚刚离开的时候暴雨就开始倾入，并造成了一系列惨剧。</p>
+<p>看到了许许多多惨痛的后果之后，以及加上站长本人的一点不勤快，<strong>站长觉得在发生灾难之时更新游记不是非常妥当，所以决定将河南游记无限期延更，直至灾情过去之时。</strong></p>
+<p>河南是一个美妙的地方，五天的游览给站长带来了很多美好的回忆。只希望灾情能够尽快过去，我们在那时候也能一起分享河南之行的喜悦。</p>
+<hr>
+<p>在最后，站长想给各位分享一首歌曲，歌名叫Come Healing，歌手名为Elayna Boynton，下图为专辑封面：</p>
+<figure data-type="image" tabindex="1"><a href="https://imgtu.com/i/WcX5ee"><img src="https://z3.ax1x.com/2021/07/25/WcX5ee.jpg" alt="WcX5ee.jpg" loading="lazy"></a></figure>
+<p>这首歌曲曾被用为王子逸导演的电影《别告诉她》的主题曲，电影讲述了一个亲情的故事，有兴趣的读者可以自行寻找观看。</p>
+<p>这首歌里面站长最喜欢的是它的音调，以及它的歌词，十分建议看着歌词一起听。</p>
+<p>希望这首歌，不论被谁听到，也不论你在不在灾区中央，都能给你带来抚摸，使你的心灵重归平静。</p>
+<p>愿天佑河南，以及每一位受苦受难的人。</p>
+<p>也感谢所有对河南表示支持及关切的个人，企业，以及外国政府。</p>
+<p>最重要的，<strong>感谢每一位在救援中奉献了自己力量的人。</strong></p>
+<p>阿门🙏🙏🙏🕯🕯🕯</p>
 
             </div>
             <div class="post-footer">
@@ -624,7 +408,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://drclairvoyant.github.io/post/wo-jue-ding-qu-xue-ri-yu-liao/" title="我决定去学日语了">https://drclairvoyant.github.io/post/wo-jue-ding-qu-xue-ri-yu-liao/</a>
+      <a href="https://drclairvoyant.github.io/post/pray-for-henan/" title="为河南祈福&amp;更新通知">https://drclairvoyant.github.io/post/pray-for-henan/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -637,15 +421,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【一周BB】2021/06/28–––2021/07/04" href="https://drclairvoyant.github.io/post/weekly-bb-20210628-20210704/">【一周BB】2021/06/28–––2021/07/04</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【一周BB】2021/06/28–––2021/07/04" href="https://drclairvoyant.github.io/post/weekly-bb-20210628-20210704/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="【喷嚏网转载】冰岛中文" href="https://drclairvoyant.github.io/post/pen-ti-wang-zhuan-zai-bing-dao-zhong-wen/">【喷嚏网转载】冰岛中文</a>
-        <a class="nav-mobile-next" title="【喷嚏网转载】冰岛中文" href="https://drclairvoyant.github.io/post/pen-ti-wang-zhuan-zai-bing-dao-zhong-wen/">下一篇</a>
+        <a class="nav-pc-next" title="想体验被世界丢弃的感觉，只需要丢掉你身上唯一一只口罩" href="https://drclairvoyant.github.io/post/xiang-ti-yan-bei-shi-jie-diu-qi-de-gan-jue-zhi-xu-yao-diu-diao-ni-shen-shang-wei-yi-yi-zhi-kou-zhao/">想体验被世界丢弃的感觉，只需要丢掉你身上唯一一只口罩</a>
+        <a class="nav-mobile-next" title="想体验被世界丢弃的感觉，只需要丢掉你身上唯一一只口罩" href="https://drclairvoyant.github.io/post/xiang-ti-yan-bei-shi-jie-diu-qi-de-gan-jue-zhi-xu-yao-diu-diao-ni-shen-shang-wei-yi-yi-zhi-kou-zhao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
