@@ -8,7 +8,7 @@
 <meta name="keywords" content="Micah">
 <meta name="description" content="言者无罪，闻者足戒。">
 <meta name="theme-color" content="#000">
-<title>翻译一下 | Micah的日常BB Channel</title>
+<title>Weekly Morning Newswire 2021/10/01 ––– 2021/10/10 | Micah的日常BB Channel</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1637427230432">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -29,8 +29,8 @@
 
 
 
-  <meta name="description" content="翻译一下" />
-  <meta name="keywords" content="测试文章" />
+  <meta name="description" content="Weekly Morning Newswire 2021/10/01 ––– 2021/10/10" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -200,7 +200,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -251,6 +252,202 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#china-holds-72th-founding-anniversary-and-investigations-to-the-ex-minister-of-the-ministry-of-justice">China holds 72th founding anniversary, and investigations to the ex-minister of the Ministry of Justice.</a></li>
+<li><a href="#us-exceeds-700000-covid-19-death-tolls-as-the-cases-drops">U.S. exceeds 700,000 Covid-19 Death Tolls, as the cases drops.</a></li>
+<li><a href="#fumio-kishida-becomes-the-new-pm-of-japan-after-becoming-the-president-of-japan-ldp">Fumio Kishida becomes the new P.M. of Japan, after becoming the president of Japan LDP.</a></li>
+<li><a href="#the-2021-nobel-prize-results-were-announced-by-the-awarding-institutions">The 2021 Nobel Prize Results were announced by the awarding institutions.</a></li>
+<li><a href="#a-russian-film-crew-took-their-film-shots-at-international-space-station">A Russian film crew took their film shots at International Space Station.</a></li>
+<li><a href="#texas-abortion-ban-was-halted-by-federal-judge-claiming-unlawfully-prevented-womens-constitutional-rights">Texas abortion ban was halted by federal judge, claiming &quot;unlawfully prevented women's Constitutional rights&quot;.</a></li>
+<li><a href="#china-propose-peaceful-reunion-with-taiwan-receiving-strong-feedback-from-tsai-ing-wen">China propose &quot;peaceful reunion&quot; with Taiwan, receiving strong feedback from Tsai Ing-Wen.</a></li>
+<li><a href="#a-100-year-old-ex-nazi-ss-guard-was-tried-in-a-court-in-brandenburg-germany">A 100-year old ex-Nazi SS guard was tried in a court in Brandenburg, Germany.</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -338,8 +535,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://drclairvoyant.github.io/post/translation/">
-      翻译一下
+    <a class="post-title-link" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211001-20211010/">
+      Weekly Morning Newswire 2021/10/01 ––– 2021/10/10
     </a>
   </h1>
   <div class="post-meta">
@@ -347,36 +544,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2021-06-24</span>
+      <span>2021-11-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show">分类于</span>
-      
-      
-      <a href="https://drclairvoyant.github.io/tag/testings/">
-        <span>测试文章</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>10分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>7<span class="pc-show">字数</span></span>
+      <span>1597<span class="pc-show">字数</span></span>
     </span>
     
     
     
-    <span id="/post/translation/" data-flag-title="翻译一下" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/weekly-morning-newswire-20211001-20211010/" data-flag-title="Weekly Morning Newswire 2021/10/01 ––– 2021/10/10" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span>浏览量：<span class="leancloud-visitors-count"></span></span>
@@ -385,7 +569,105 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <p>什么tm叫tm的博客？？？！！！</p>
+              <p>Good morning to all English speakers! This is an entire new column for the site, and it is also an archive for the newswires I wrote for the campus. Please enjoy !!! 😃</p>
+<hr>
+<p>Good morning from Shenzhen, In this week's RDF Morning Newswire:</p>
+<ul>
+<li>China celebrates its 72th anniversary, while China's ex-minister of the Ministry of Justice is investigated for indiscipline.</li>
+<li>Around 700,000 Americans died from Covid-19 as the cases are dropping.</li>
+<li>Fumio Kishida becomes the new P.M. of Japan after Yoshihide Suga declared to quit of re-election in September.</li>
+<li>The Nobel Prize awarding Institutions unveil the result of the 2021 Nobel Prize.</li>
+<li>A Russian film crew is making a new film, in space.</li>
+<li>Texas SB 8 abortion ban was temporarily halted by the Court.</li>
+<li>China urges for peaceful reunions with Taiwan, receiving strong feedback from Tsai Ing-Wen.</li>
+<li>A 100-year old ex-Nazi SS guard went on trial as the oldest person to be tried.</li>
+</ul>
+<h2 id="china-holds-72th-founding-anniversary-and-investigations-to-the-ex-minister-of-the-ministry-of-justice">China holds 72th founding anniversary, and investigations to the ex-minister of the Ministry of Justice.</h2>
+<p>China and the Chinese people stepped into its 72th anniversary and a 7-day holiday, with packed and overwhelming tourists at nearly all the attractions across the country. Meanwhile, the former minister of the Ministry of Justice, Fu Zhenghua, was involved into series of investigations due to his &quot;severe misconduct&quot;, according to the State Committee of Supervisory of PRC. The Ministry of Justice and Beijing Public Security Bureau stated their strict attitude on similar inappropriate behaviors, after a meeting held in October 2. (Caixin)</p>
+<figure data-type="image" tabindex="1"><img src="https://drclairvoyant.github.io/post-images/media/0001/16332725719339.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>A portrait of Fu Zhenghua. (via Caixin)</p>
+</blockquote>
+<h2 id="us-exceeds-700000-covid-19-death-tolls-as-the-cases-drops">U.S. exceeds 700,000 Covid-19 Death Tolls, as the cases drops.</h2>
+<p>The United States arrives at the total 700,000 Covid-19 deaths from 600,000, which is larger than the population of Boston, with a short period of 3 and a half months. The vast unvaccinated people who are qualified to get the vaccine shots was regarded as the main reason for the spreading of the virus, and the increasingly rising death toll, according to the public health leaders and medical professionals. The U.S. President's chief medical advisor, Dr. Anthony Fauci, warned on Friday that seeing a decreasing trend is not a reason to remain unvaccinated. (NPR)</p>
+<figure data-type="image" tabindex="2"><img src="https://drclairvoyant.github.io/post-images/media/0001/16332389870298.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>The data on Covid-19 of the United States of America, screenshot at 2021/10/03 --- 1:30 p.m.</p>
+</blockquote>
+<h2 id="fumio-kishida-becomes-the-new-pm-of-japan-after-becoming-the-president-of-japan-ldp">Fumio Kishida becomes the new P.M. of Japan, after becoming the president of Japan LDP.</h2>
+<p>Japan's former foreign minister, Fumio Kishida, becomes the president of the Japan Liberal-Democratic Party by defeating his opponent, Kono Taro, with 257 votes from the party members. Kishida will replace the current prime minister, Yoshihide Suga, who chose to step down due to the overwhelming criticisms to his Covid-19 response. Kishida officially becomes the P.M. of Japan after an election held in Japan's parliament at October 4. He also claimed more strategies for coping the Covid-19 and strengthening the bond with like-minded allies for against Beijing's administration over its rising tension with Hong Kong and Taiwan. (AP, NPR)</p>
+<figure data-type="image" tabindex="3"><img src="https://drclairvoyant.github.io/post-images/media/0001/1000.jpeg" alt="1000" loading="lazy"></figure>
+<blockquote>
+<p>Fumio Kishida bows after being elected as Japan's prime minister at the parliament's lower house Monday, Oct. 4, 2021, in Tokyo. Kishida was formally elected Monday as Japan's new prime minister in a parliamentary vote, replacing Yoshihide Suga. (via AP Photo/Eugene Hoshiko)</p>
+</blockquote>
+<h2 id="the-2021-nobel-prize-results-were-announced-by-the-awarding-institutions">The 2021 Nobel Prize Results were announced by the awarding institutions.</h2>
+<p>The results were presented below in the releasing time order. Sources are from the site <a href="nobelprize.org">nobelprize.org</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Awarding Subject</th>
+<th style="text-align:left"><strong>Laureates</strong> &amp; <em>Affiliation</em></th>
+<th style="text-align:left"><u>Motivation</u></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Physiology or Medicine</td>
+<td style="text-align:left"><strong>David Julius</strong> <em>(University of California, San Francisco, CA, USA)</em> &amp; <strong>Ardem Patapoutian</strong> <em>(Howard Hughes Medical Institute)</em></td>
+<td style="text-align:left"><u>For their discoveries of receptors for temperature and touch</u></td>
+</tr>
+<tr>
+<td style="text-align:left">Physics</td>
+<td style="text-align:left"><strong>Syukuro Manabe</strong> <em>(Princeton University, Princeton, NJ, USA)</em> &amp; <strong>Klaus Hasselmann</strong> <em>(Max Planck Institute for Meteorology, Hamburg, Germany)</em> &amp; <strong>Giorgio Parisi</strong> <em>(Sapienza University of Rome, Rome, Italy)</em></td>
+<td style="text-align:left"><u>For the physical modelling of Earth's climate, quantifying variability and reliably</u> (Manabe &amp; Hasselmann) &amp; <u>For the discovery of the interplay of disorder and fluctuations in physical systems from atomic to planetary scales</u> (Parisi)</td>
+</tr>
+<tr>
+<td style="text-align:left">Chemistry</td>
+<td style="text-align:left"><strong>Benjamin List</strong> <em>(Max-Planck-Institut für Kohlenforschung, Mülheim an der Ruhr, Germany)</em> &amp; <strong>David W.C. MacMillian</strong> <em>(Princeton University, Princeton, NJ, USA)</em></td>
+<td style="text-align:left"><u>For the development of asymmetric organocatalysis</u></td>
+</tr>
+<tr>
+<td style="text-align:left">Literature</td>
+<td style="text-align:left"><strong>Abdulrazak Gurnah</strong></td>
+<td style="text-align:left"><u>For his uncompromising and compassionate penetration of the effects of colonialism and the fate of the refugee in the gulf between cultures and continents</u></td>
+</tr>
+<tr>
+<td style="text-align:left">Peace</td>
+<td style="text-align:left"><strong>Maria Ressa</strong> &amp; <strong>Dmitry Muratov</strong></td>
+<td style="text-align:left"><u>For their efforts to safeguard freedom of expression, which is a precondition for democracy and lasting peace</u></td>
+</tr>
+</tbody>
+</table>
+<p>The Nobel Prize of Economic Sciences will be released in October 11, 2021 by The Royal Swedish Academy of Sciences, according to the press release of NobelPrize.org.</p>
+<h2 id="a-russian-film-crew-took-their-film-shots-at-international-space-station">A Russian film crew took their film shots at International Space Station.</h2>
+<p>The director Klim Shipenko and the actor Yulia Pereslid move the shooting scenes of their movie, &quot;The Challenge&quot;, to the International Space Station in a Russian Soyuz spacecraft, with the accompany of a cosmonaut Anton Shkaplerov. Their spacecraft took off at 08:55 GMT from Baikonur, Kazakhstan, and arrived at the station after about 3 and a half hours. The crew planned to return to Earth with an another cosmonaut after 12 days of stay. The mission was said that it will be an effective propaganda to Russia's space powers and history, according to the Kremlin spokesperson Dmitry Peskov. (AP)</p>
+<figure data-type="image" tabindex="4"><img src="https://drclairvoyant.github.io/post-images/media/0001/1000-2.jpeg" alt="1000-2" loading="lazy"></figure>
+<blockquote>
+<p>In this photo taken from video footage released by Roscosmos Space Agency, actress Yulia Peresild, left, film director Klim Shipenko, right, and cosmonaut Anton Shkaplerov sit in the first row among other participants of the mission in the International Space Station, ISS, Tuesday, Oct. 5, 2021. Russian actress Yulia Peresild and a film director Klim Shipenko rocketed to space Tuesday on a mission to make the world's first movie in orbit, a project the Kremlin said will help burnish the nation's space glory. (Roscosmos Space Agency via AP)</p>
+</blockquote>
+<h2 id="texas-abortion-ban-was-halted-by-federal-judge-claiming-unlawfully-prevented-womens-constitutional-rights">Texas abortion ban was halted by federal judge, claiming &quot;unlawfully prevented women's Constitutional rights&quot;.</h2>
+<p>The new Texan SB 8 abortion law was halted by a federal judge after the Department of Justice sued Texas for its unconstitutional accusations and the impact brought by the new law, which caused massive shutdown of the abortion clinics due to their consternations of being sued. The SB 8 abortion law stated the prohibition to abortion after 6 weeks of pregnancy, even from unintentional means like rape, sexual abuse, incest etc. U.S. District Court Judge Robert Pitman said that &quot;women have been unlawfully prevented from exercising control over their lives in ways that are protected by the Constitution&quot; after the law has went into effect last month. He also stated that &quot;......This Court will not sanction one more day of this offensive deprivation of such an important right&quot;. U.S. Attorney General Merrick Garland commented on court's decision as &quot;a victory for women in Texas and for the rule of law&quot;, and claims that &quot;it is the foremost responsibility of the Department of Justice to defend the Constitution&quot;. (NPR)</p>
+<figure data-type="image" tabindex="5"><img src="https://drclairvoyant.github.io/post-images/media/0001/16337952948672.jpg" alt="16337952948672" loading="lazy"></figure>
+<blockquote>
+<p>Protesters take part in the Women's March and Rally for Abortion Justice at the State Capitol in Austin, Texas, on Saturday. (Sergio Flores/AFP via Getty Images)</p>
+</blockquote>
+<h2 id="china-propose-peaceful-reunion-with-taiwan-receiving-strong-feedback-from-tsai-ing-wen">China propose &quot;peaceful reunion&quot; with Taiwan, receiving strong feedback from Tsai Ing-Wen.</h2>
+<p>Chinese President Xi Jinping proposed &quot;peaceful reunion&quot; with Taiwan at Oct 9, claiming that the Chinese people &quot;have a glorious tradition of opposing separatism&quot;, and &quot;Taiwan independence separatism is the biggest obstacle to achieving the reunification of the motherland, and the most serious hidden danger to national rejuvenation&quot;, after a breaking-record amount of PLA flights flew by Taiwan in the recent week. The Tsai Ing-Wen administration posed a firm response to Beijing, stating that &quot;only Taiwan's people can decide its future&quot; and they &quot;will not compromise on defending its (Taiwan's) sovereignty or freedom&quot;. (Reuters)</p>
+<figure data-type="image" tabindex="6"><img src="https://drclairvoyant.github.io/post-images/media/0001/W2PN2TILWRI2ZI2R2COIRKOCGM.jpg" alt="W2PN2TILWRI2ZI2R2COIRKOCGM" loading="lazy"></figure>
+<blockquote>
+<p>Tsai Ing-wen attends a gala on the eve of Taiwan's National Day at Hsinchu Air Force Base in Hsinchu, Taiwan October 9, 2021. (via REUTERSN/Ann Wang)</p>
+</blockquote>
+<h2 id="a-100-year-old-ex-nazi-ss-guard-was-tried-in-a-court-in-brandenburg-germany">A 100-year old ex-Nazi SS guard was tried in a court in Brandenburg, Germany.</h2>
+<p>Josef Schuetz, an ex-Nazi SS guard who worked at the Sachsenhausen concentration camp in Oranienburg, north of Berlin, was tried in a court in Germany with the accusation of assisting of murdering 3518 criminals. Josef is 100-year old on the trial, and he is the oldest person be against on a trial for the Nazi-era crimes. He remains free during the trial and he will be less likely to be put in jail due to his age. Leon Schwarzbaum, a holocaust survivor, said that he wishes this man to be put in jail if he was found guilty. (AFP, Reuters)</p>
+<figure data-type="image" tabindex="7"><img src="https://drclairvoyant.github.io/post-images/media/0001/FM7YCMQU2FMALAPNJJTMXV6EPE.jpg" alt="FM7YCMQU2FMALAPNJJTMXV6EPE" loading="lazy"></figure>
+<blockquote>
+<p>A 100-year-old former security guard of the Sachsenhausen concentration camp appears in the courtroom before his trial at the Landgericht Neuruppin court in Brandenburg, Germany, October 7, 2021. (via REUTERS/Annegret Hilse)</p>
+</blockquote>
+<hr>
+<p><em>Disclaimer:</em></p>
+<p><em>All the copyrights of the journal excerpts belong to the original authors, photographers etc. By presenting the excerpts do not mean we endorse or object the idea, meaning etc. presented in the excerpts. The opinions in the excerpt do not represent the site's opinion.</em></p>
+<hr>
+<p>Follow us to receive the objective, accurate world and domestic news every week!</p>
 
             </div>
             <div class="post-footer">
@@ -396,7 +678,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://drclairvoyant.github.io/post/translation/" title="翻译一下">https://drclairvoyant.github.io/post/translation/</a>
+      <a href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211001-20211010/" title="Weekly Morning Newswire 2021/10/01 ––– 2021/10/10">https://drclairvoyant.github.io/post/weekly-morning-newswire-20211001-20211010/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -405,18 +687,16 @@
   </ul>
   <div class="tags">
     
-      <a href="https://drclairvoyant.github.io/tag/testings/"># 测试文章</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="这次试一下本地添加图片" href="https://drclairvoyant.github.io/post/pict-without-picbed/">这次试一下本地添加图片</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="这次试一下本地添加图片" href="https://drclairvoyant.github.io/post/pict-without-picbed/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="为河南祈福&amp;更新通知" href="https://drclairvoyant.github.io/post/pray-for-henan/">为河南祈福&amp;更新通知</a>
+        <a class="nav-mobile-next" title="为河南祈福&amp;更新通知" href="https://drclairvoyant.github.io/post/pray-for-henan/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
