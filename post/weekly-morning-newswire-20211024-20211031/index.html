@@ -8,7 +8,7 @@
 <meta name="keywords" content="Micah">
 <meta name="description" content="言者无罪，闻者足戒。">
 <meta name="theme-color" content="#000">
-<title>Micah的日常BB Channel</title>
+<title>Weekly Morning Newswire 2021/10/24 ––– 2021/10/31 | Micah的日常BB Channel</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1637549595748">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -29,6 +29,8 @@
 
 
 
+  <meta name="description" content="Weekly Morning Newswire 2021/10/24 ––– 2021/10/31" />
+  <meta name="keywords" content="一周早间要闻 Weekly Morning Newswire" />
 </head>
 
 <body>
@@ -182,8 +184,24 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -234,65 +252,425 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#weekly-morning-newswire-20211024-20211031">Weekly Morning Newswire 2021/10/24 ––– 2021/10/31</a>
+<ul>
+<li><a href="#japanese-princess-mako-registered-marriage-with-kei-kumoro-losing-her-loyal-status">Japanese princess Mako registered marriage with Kei Kumoro, losing her loyal status.</a></li>
+<li><a href="#military-coup-takes-place-in-sudan-pm-of-sudan-was-arrested-and-security-forces-initiate-crackdown-towards-protesters">Military coup takes place in Sudan, PM of Sudan was arrested and security forces initiate crackdown towards protesters.</a></li>
+<li><a href="#actor-for-gunther-at-the-series-friends-james-michael-tyler-dies-on-october-24">Actor for Gunther at the series &quot;Friends&quot;, James Michael Tyler, dies on October 24.</a></li>
+<li><a href="#detonation-occurs-at-a-chinese-university-resulting-2-deaths-and-9-injured">Detonation occurs at a Chinese university, resulting 2 deaths and 9 injured.</a></li>
+<li><a href="#chinese-viewers-resist-dune-in-imax-3d-while-the-2d-version-is-still-on-the-way">Chinese viewers resist &quot;Dune&quot; in IMAX 3D, while the 2D version is still on the way.</a></li>
+<li><a href="#the-united-states-issued-the-first-passport-with-the-x-mark-on-the-gender-column">The United States issued the first passport with the &quot;X&quot; mark on the gender column.</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini box-shadow-wrapper">
-          <section class="friends-section bg-color slide-down-in">
-            <div class="firends-box">
-              <h1 class="firends-title" itemprop="name headline">友情链接</h1>
-              
-              
-              <a href="https://nyakokaslana.github.io" target="_blank">
-                <div class="firends-item">
-                  <img src="https://imgtu.com/i/WXhwTI" />
-                  <div class="right">
-                    <div class="top">
-                      喵子的指挥室
-                    </div>
-                    <div class="bottom">
-                      
-                    </div>
-                  </div>
-                </div>
-              </a>
-              
-              
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
             </div>
-            <hr>
-            <div style="text-align:center">
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
-              留言添加友链
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211024-20211031/">
+      Weekly Morning Newswire 2021/10/24 ––– 2021/10/31
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2021-11-21</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://drclairvoyant.github.io/tag/weekly-morning-newswire/">
+        <span>一周早间要闻 Weekly Morning Newswire</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>8分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1172<span class="pc-show">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/weekly-morning-newswire-20211024-20211031/" data-flag-title="Weekly Morning Newswire 2021/10/24 ––– 2021/10/31" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span>浏览量：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
+              <h1 id="weekly-morning-newswire-20211024-20211031">Weekly Morning Newswire 2021/10/24 ––– 2021/10/31</h1>
+<p>Good morning from Shenzhen, in today's Weekly Morning Newswire:</p>
+<ul>
+<li>Japanese princess Mako marries a commoner, giving up her loyal status.</li>
+<li>Coup occurs in Sudan, PM of Sudan's transitional government was detained.</li>
+<li>James Michael Tyler, actor for &quot;Gunther&quot; at series &quot;Friends&quot;, dies on October 24.</li>
+<li>A deflagration incident occurred at an university in Nanjing, China.</li>
+<li>Chinese audiences boycott the IMAX 3D format of the film &quot;Dune&quot;.</li>
+<li>The United States issued the first passport with &quot;X&quot; gender marker.</li>
+</ul>
+<hr>
+<h2 id="japanese-princess-mako-registered-marriage-with-kei-kumoro-losing-her-loyal-status">Japanese princess Mako registered marriage with Kei Kumoro, losing her loyal status.</h2>
+<p>The niece of Japanese Emperor Naruhito, Mako Kumoro, recently registered marriage relationship on October 26 with Kei Kumoro, who has studied laws in the United States. Mako was required to give up her loyal status according to the Imperial Household Law of 1947 in Japan, which states that the Japanese Princess has to give up the loyal status when marrying to a male commoner. The couple will then move to New York to start a new life. (AP, Mari Yamaguchi)</p>
+<figure data-type="image" tabindex="1"><img src="https://drclairvoyant.github.io/post-images/media/0004/1000.jpeg" alt="1000" loading="lazy"></figure>
+<blockquote>
+<p>Japan's former Princess Mako, right, the elder daughter of Crown Prince Akishino and Crown Princess Kiko, and her husband Kei Komuro, look at each other during a press conference to announce their marriage at a hotel in Tokyo, Japan Tuesday, Oct. 26, 2021. Former Princess Mako married the commoner and lost her royal status Tuesday in a union that has split public opinion after a three-year delay caused by a financial dispute involving her new mother-in-law. (Nicolas Datiche/Pool Photo via AP)</p>
+</blockquote>
+<h2 id="military-coup-takes-place-in-sudan-pm-of-sudan-was-arrested-and-security-forces-initiate-crackdown-towards-protesters">Military coup takes place in Sudan, PM of Sudan was arrested and security forces initiate crackdown towards protesters.</h2>
+<p>A coup initiated by Sudan's military and its general, Gen. Abdel-Fattah Burhan, takes place on October 25, seizing power after arresting Sudan's Prime Minister, Abdalla Hamdok, of the current transitional government. Thousands of protesters walk on the streets for protesting military's interruption to the state's on-going progress to democracy, facing crackdown from the security powers. The crackdown results 3 deaths of and 80 demonstrators wounded, according to Sudan Doctors' Committee. Abdalla Hamdok and his wife were allowed to return home on October 26, according to an official statement from his office. (AP, Samy Magdy)</p>
+<figure data-type="image" tabindex="2"><img src="https://drclairvoyant.github.io/post-images/media/0004/1000-2.jpeg" alt="1000-2" loading="lazy"></figure>
+<blockquote>
+<p>Pro-democracy protesters flash the victory sign as they take to the streets to condemn a takeover by military officials, in Khartoum, Sudan, Monday Oct. 25, 2021. Sudan’s military seized power Monday, dissolving the transitional government hours after troops arrested the acting prime minister and other officials. The takeover comes more than two years after protesters forced the ouster of longtime autocrat Omar al-Bashir and just weeks before the military was expected to hand the leadership of the council that runs the African country over to civilians. (AP Photo/Ashraf Idris)</p>
+</blockquote>
+<h2 id="actor-for-gunther-at-the-series-friends-james-michael-tyler-dies-on-october-24">Actor for Gunther at the series &quot;Friends&quot;, James Michael Tyler, dies on October 24.</h2>
+<p>The actor for the role Gunther, James Michael Tyler, dies on October 24 at the age of 59 after his 3-year long struggle with advance prostate cancer. The message was announced by James' manager Toni Benson. Tyler has become well known after casting in the popular series &quot;Friends&quot; as the role of Gunther, who is a server of the &quot;Central Perk&quot; coffeehouse and having an affection on another character Rachel. (AP)</p>
+<figure data-type="image" tabindex="3"><img src="https://drclairvoyant.github.io/post-images/media/0004/1000-3.jpeg" alt="1000-3" loading="lazy"></figure>
+<blockquote>
+<p>FILE - American actor James Michael Tyler poses for a portrait on Wednesday, Nov. 14, 2012, in New York. Tyler, the actor known widely for his recurring role as Gunther on “Friends,” died Sunday, Oct. 24, 2021, at his home in Los Angeles from prostate cancer. He was 59. (Photo by Carlo Allegri/Invision/AP, File)</p>
+</blockquote>
+<h2 id="detonation-occurs-at-a-chinese-university-resulting-2-deaths-and-9-injured">Detonation occurs at a Chinese university, resulting 2 deaths and 9 injured.</h2>
+<p>A deflagration occurs at a laboratory of the &quot;Jiangjun Building&quot; of the Nanjing University of Aeronautics and Astronautics on October 25, which might be caused by the inflation of chemicals. The building where the event occurs was just built at last year, and only a few chemicals and equipments were transported to that new building, according to an anonymous graduate student from this university. Some eyewitnesses claimed that they saw 2 students putting water on the staircase handrails to cool its temperature down for helping others to escape, and they are engulfed by the fire when the second detonation occurs. (Lianhe Zaobao)</p>
+<figure data-type="image" tabindex="4"><img src="https://drclairvoyant.github.io/post-images/media/0004/001NWzQDgy1gvra9kpim4j60u0140whj_e64b486b10184ad6be06c6d42e9e5cd1.jpg" alt="001NWzQDgy1gvra9kpim4j60u0140whj_e64b486b10184ad6be06c6d42e9e5cd1" loading="lazy"></figure>
+<blockquote>
+<p>A deflagration incident occurs at a laboratory of NUAA, Nanjing, China on October 25. (Unknown Photographer)</p>
+</blockquote>
+<h2 id="chinese-viewers-resist-dune-in-imax-3d-while-the-2d-version-is-still-on-the-way">Chinese viewers resist &quot;Dune&quot; in IMAX 3D, while the 2D version is still on the way.</h2>
+<p>Chinese viewers went into outrage after they found out that the film &quot;Dune&quot; was presented in IMAX 3D without the option of 2D, and they decided to boycott the 3D format until the release of 2D at the cinema. Some claimed that it is not fair for the Chinese viewers only having limited choices compared to other countries' market, and some said that they will pirate the film instead for boycotting the 3D. Also they mentioned that seeing in 3D will distort the comfort when watching the movie. Yet while they are still holding their resistance, the 2D format was still not approve and release into the market yet. (variety.com)</p>
+<figure data-type="image" tabindex="5"><img src="https://drclairvoyant.github.io/post-images/media/0004/Dune-Movie-1.jpg.webp" alt="Dune-Movie-1.jpg" loading="lazy"></figure>
+<blockquote>
+<p>A shot took from the film &quot;Dune&quot; by Denis Villeneuve. (via Warner Bros.)</p>
+</blockquote>
+<h2 id="the-united-states-issued-the-first-passport-with-the-x-mark-on-the-gender-column">The United States issued the first passport with the &quot;X&quot; mark on the gender column.</h2>
+<p>Dana Zzyym (pronounced Zimm), an intersex activist from Fort Collins, Colorado, recently received the first passport without stating the gender in the traditional dualistic type, but only with a &quot;X&quot; mark. Zzyym has been in a legal debate with the U.S. State Department for advocating the legalization of a third gender designation on the legal identifications, that Zzyym would not need to lie on the sexual identity. The State Department stated on October 27 that it is considered as &quot;a milestone in the recognition of the rights of people who do not identify as male or female, and expects to be able to offer the option more broadly next year&quot;. (AP, Colleen Slevin)</p>
+<figure data-type="image" tabindex="6"><img src="https://drclairvoyant.github.io/post-images/media/0004/1000-4.jpeg" alt="1000-4" loading="lazy"></figure>
+<blockquote>
+<p>Dana Zzyym poses for a photo, Wednesday, Oct. 27, 2021, in Fort Collins, Colo. Zzyym, who prefers a gender-neutral pronoun, told the Associated Press that their passport is the first U.S. passport to be issued with an &quot;X&quot; gender designation, marking a milestone in the recognition of the rights of people who do not identify as male or female. (AP Photo/Thomas Peipert)</p>
+</blockquote>
+<hr>
+<p><em>Disclaimer:</em></p>
+<p><em>All the copyrights of the journal excerpts belong to the original authors, photographers etc. By presenting the excerpts do not mean we endorse or object the ideas, meanings etc. that are presented in the excerpts. The opinions in the excerpt do not represent the site's opinion.</em></p>
+<hr>
+<p>Follow us to receive the objective, accurate world and domestic news every week!</p>
+
             </div>
-            <hr>
-            <div class="friends-note">
-              <p><strong>友链格式：</strong></p>
-              <ul>
-                <li>网站名称：枫糖</li>
-                <li>网站地址：<a href="https://blog.maplesugar.space" data-pjax-state="">https://blog.maplesugar.space</a>
-                </li>
-                <li> 网站描述：From rookie to master</li>
-                <li> 网站 Logo / 头像：<a href="https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg"
-                    data-pjax-state="">https://blog.maplesugar.space/uploads/maple-leaf-avatar.jpg</a></li>
-              </ul>
-            </div>
+            <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Micah的日常BB Channel
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211024-20211031/" title="Weekly Morning Newswire 2021/10/24 ––– 2021/10/31">https://drclairvoyant.github.io/post/weekly-morning-newswire-20211024-20211031/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://drclairvoyant.github.io/tag/weekly-morning-newswire/"># 一周早间要闻 Weekly Morning Newswire</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="Weekly Morning Newswire 2021/11/08 ––– 2021/11/14" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211108-20211114/">Weekly Morning Newswire 2021/11/08 ––– 2021/11/14</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="Weekly Morning Newswire 2021/11/08 ––– 2021/11/14" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211108-20211114/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Weekly Morning Newswire 2021/10/10 ––– 2021/10/16" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211010-20211016/">Weekly Morning Newswire 2021/10/10 ––– 2021/10/16</a>
+        <a class="nav-mobile-next" title="Weekly Morning Newswire 2021/10/10 ––– 2021/10/16" href="https://drclairvoyant.github.io/post/weekly-morning-newswire-20211010-20211016/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
   <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
 <div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
@@ -342,7 +720,7 @@
   });
 </script>
 
-          </section>
+          </div>
         </div>
       </div>
     </div>
@@ -1052,6 +1430,36 @@
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
 </script>
   </div>
 </body>
@@ -1887,7 +2295,6 @@ Minecraft国际版（Java）继支持了世界上绝大多数语言之后又来�
   escapeMap.set('&quot;', '"');
   escapeMap.set('&amp;', '&');
 </script> -->
-
 
 
 </html>
